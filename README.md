@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Traffic Light Simulator with Pedestrian Crossing and Emergency Override
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a Traffic Light Simulator built with React and Tailwind CSS. It includes a traffic light system with a vertical layout, pedestrian crossing functionality, and an emergency vehicle override feature. Toast notifications are used to provide feedback on user actions.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Traffic Light Control**: Three lights (Red, Yellow, Green) that follow a specific sequence with timers.
+- **Pedestrian Crossing**: A button to request pedestrian crossing, which changes the light to Red and extends the Red duration.
+- **Emergency Vehicle Override**: An emergency button that interrupts the current light sequence to allow emergency vehicles to pass.
+- **Countdown Timers**: Displays remaining seconds for each light before changing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository**
 
-### `npm test`
+   ```bash
+   git clone https://github.com/yourusername/traffic-light-simulator.git
+Navigate to the Project Directory
+   cd traffic-light-simulator
+   
+Install Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have Node.js installed. Then run:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    npm install
+Usage
+Start the Development Server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+    npm start
+This will start the development server and open the application in your default browser. The application will be available at http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Interacting with the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Traffic Light: Observe the traffic light sequence change between Green, Yellow, and Red.
+Pedestrian Button: Click to request a pedestrian crossing. The traffic light will turn Red, and a toast notification will appear.
+Emergency Vehicle Override: Click the button to override the traffic light sequence for emergency vehicles.
+Project Structure
+src/
+components/
+GreenLight.js: Component for displaying the green light.
+YellowLight.js: Component for displaying the yellow light.
+RedLight.js: Component for displaying the red light.
+PedestrianButton.js: Component for requesting pedestrian crossing.
+TrafficLight.js: Main component handling traffic light control and UI interactions.
+context/
+TrafficLightContext.js: Context and reducer for managing traffic light state and actions.
+App.js: Main application component.
+index.js: Entry point of the application.
+Customization
+Timers: Modify the timer values in the TrafficLightContext.js file to adjust how long each light stays on.
+Styles: Customize the appearance of the traffic lights and buttons using Tailwind CSS classes in the component files.
+Dependencies
+React: Frontend library for building user interfaces.
+Tailwind CSS: Utility-first CSS framework for styling.
+React Toastify: Library for displaying toast notifications.
+Contributing
+Feel free to open issues or submit pull requests if you have suggestions or improvements. Please follow the standard Git workflow for contributing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
